@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display:,300, 400, 700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+    <link rel="stylesheet" href="/static/fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/static/fonts/fontawesome/css/font-awesome.min.css">
+
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+  </head>
+  <body>
+    
+    <div class="site-wrap">
+
+      <a href="#" class="offcanvas-toggle js-offcanvas-toggle my-3" style="color: #44ff33;">🟢Menu</a>
+      <div class="offcanvas_menu" id="offcanvas_menu">
+        <ul class="mb-5">
+          <li class="{% block HomeActive %}{% endblock HomeActive %}"><a href="/">Home</a></li>
+          <li class="{% block PortfolioActive %}{% endblock PortfolioActive %}"><a href="projects">Projects</a></li>
+          <li class="{% block ResumeActive %}{% endblock ResumeActive %}"><a href="resume">Resume</a></li>
+          <li class="{% block ContactActive %}{% endblock ContactActive %}"><a href="contact">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="https://twitter.com/aayush_samaiyar" class="fa fa-twitter"></a></li>
+          <li><a href="https://www.facebook.com/aayush.samaiyar/ " class="fa fa-facebook"></a></li>
+          <li><a href="https://www.instagram.com/aayushsamaiyar/" class="fa fa-instagram"></a></li>
+          <li><a href="https://www.linkedin.com/in/aayush-samaiyar-2a7365191/" class="fa fa-linkedin"></a></li>
+        </ul>
+      </div>
+      
+      <aside style="background-image: url(/static/img/profilepic.jpg);"></aside>
+
+      {% block main %}{% endblock main %}
+
+    </div>
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/jquery.countdown.min.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

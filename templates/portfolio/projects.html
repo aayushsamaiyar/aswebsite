@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+{% block title %}AS - Projects{% endblock title %} 
+{%block PortfolioActive %}active{% endblock PortfolioActive %} 
+{% block main %}
+<main>
+  {% load static %}
+  <a href="/" class="home-button"><span class="fa fa-home"></span></a>
+  <h1 class="mb-5">My Projects</h1>
+  <div class="mb-5">
+    <ul class="portfolio-list">
+      {% for project in myprojects%}
+      <li>
+          <img src="{{project.thumbnail.url}}" alt="{{project.project_name}}" />
+          <div class="text">
+            <h3>{{project.project_name}}</h3>
+            <span>{{project.project_desc}}</span>
+          </div>
+          <a href="{{project.git_link}}" class="btn btn-primary">Source Code</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+{% endblock main %}
