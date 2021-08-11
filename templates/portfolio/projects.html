@@ -9,8 +9,9 @@
   <div class="mb-5">
     <ul class="portfolio-list">
       {% for project in myprojects%}
+
       <li>
-          <img src="{{project.thumbnail.url}}" alt="{{project.project_name}}" />
+          <img src="{{project.thumbnail.url}}" alt="{{project.project_name}}" style="width: 100%;" />
           <div class="text">
             <h3>{{project.project_name}}</h3>
             <span>{{project.project_desc}}</span>

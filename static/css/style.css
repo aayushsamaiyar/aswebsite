@@ -400,7 +400,7 @@ main {
 }
 
 .portfolio-list li a img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .portfolio-list li a .text {
