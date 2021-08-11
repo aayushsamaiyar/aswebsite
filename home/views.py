@@ -23,7 +23,6 @@ def contact(request):
 
 def projects(request):
   myprojects = Projectpost.objects.all()
-  print(myprojects)
   return render(request,'portfolio/projects.html',{'myprojects':myprojects})
 
 def resume(request):
